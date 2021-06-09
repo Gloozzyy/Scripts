@@ -1,0 +1,312 @@
+-- SIMPLE COMMANDS BY Gloozzy
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Noclip = Instance.new("TextButton")
+local Fly = Instance.new("TextButton")
+local NoClipLabel = Instance.new("TextLabel")
+local FlyLabel = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Main.Position = UDim2.new(0.36297375, 0, 0.3765001, 0)
+Main.Size = UDim2.new(0, 375, 0, 190)
+
+Noclip.Name = "Noclip"
+Noclip.Parent = Main
+Noclip.BackgroundColor3 = Color3.fromRGB(255, 81, 0)
+Noclip.Position = UDim2.new(0.0194174759, 0, 0.232574344, 0)
+Noclip.Size = UDim2.new(0, 25, 0, 25)
+Noclip.AutoButtonColor = false
+Noclip.Font = Enum.Font.SourceSans
+Noclip.Text = ""
+Noclip.TextColor3 = Color3.fromRGB(0, 0, 0)
+Noclip.TextSize = 14.000
+
+Fly.Name = "Fly"
+Fly.Parent = Main
+Fly.BackgroundColor3 = Color3.fromRGB(255, 81, 0)
+Fly.Position = UDim2.new(0.0194174759, 0, 0.0271901879, 0)
+Fly.Size = UDim2.new(0, 25, 0, 25)
+Fly.AutoButtonColor = false
+Fly.Font = Enum.Font.SourceSans
+Fly.Text = ""
+Fly.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fly.TextSize = 14.000
+
+NoClipLabel.Name = "NoClipLabel"
+NoClipLabel.Parent = Main
+NoClipLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NoClipLabel.BackgroundTransparency = 1.000
+NoClipLabel.Position = UDim2.new(0.0803871527, 0, 0.236808196, 0)
+NoClipLabel.Size = UDim2.new(0, 92, 0, 25)
+NoClipLabel.ZIndex = 6
+NoClipLabel.Font = Enum.Font.SourceSansBold
+NoClipLabel.Text = "Noclip 'c'"
+NoClipLabel.TextColor3 = Color3.fromRGB(225, 225, 225)
+NoClipLabel.TextSize = 20.000
+NoClipLabel.TextWrapped = true
+
+FlyLabel.Name = "FlyLabel"
+FlyLabel.Parent = Main
+FlyLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FlyLabel.BackgroundTransparency = 1.000
+FlyLabel.Position = UDim2.new(0.0803871527, 0, 0.0277061164, 0)
+FlyLabel.Size = UDim2.new(0, 69, 0, 25)
+FlyLabel.ZIndex = 6
+FlyLabel.Font = Enum.Font.SourceSansBold
+FlyLabel.Text = "Fly 'x'"
+FlyLabel.TextColor3 = Color3.fromRGB(225, 225, 225)
+FlyLabel.TextSize = 20.000
+FlyLabel.TextWrapped = true
+
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.35238722, 0, 0.83684212, 0)
+TextLabel.Size = UDim2.new(0, 242, 0, 31)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Simple Commands by ViiPer Utilities"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 18.000
+
+TextButton.Parent = Main
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Position = UDim2.new(0.866666675, 0, 0, 0)
+TextButton.Size = UDim2.new(0, 50, 0, 50)
+TextButton.Text = "X"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 27.000
+
+-- Scripts:
+
+local function HSBXNPZ_fake_script() -- Noclip.LocalScript 
+	local script = Instance.new('LocalScript', Noclip)
+
+	local value = false
+	script.Parent.MouseButton1Click:Connect(function()
+		if value == false then
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 81, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 140, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 162, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 226, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(209, 255, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(89, 255, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(17, 255, 0)
+			wait(0.15)
+			value = true
+			noclip = true
+			game:GetService('RunService').Stepped:connect(function()
+				if noclip then
+					game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+				end
+			end)
+			plr = game.Players.LocalPlayer
+			mouse = plr:GetMouse()
+			mouse.KeyDown:connect(function(key)
+	
+				if key == "c" then
+					noclip = not noclip
+					game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+				end
+			end)
+		else
+			script.Parent.BackgroundColor3 = Color3.fromRGB(17, 255, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(89, 255, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(209, 255, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 226, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 162, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 140, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 81, 0)
+			wait(0.15)
+			value = false
+			noclip = not noclip
+			game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+		end
+	end)
+end
+coroutine.wrap(HSBXNPZ_fake_script)()
+local function PIOW_fake_script() -- Fly.LocalScript 
+	local script = Instance.new('LocalScript', Fly)
+
+	local value = false
+	script.Parent.MouseButton1Click:Connect(function()
+		if value == false then
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 81, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 140, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 162, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 226, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(209, 255, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(89, 255, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(17, 255, 0)
+			wait(0.15)
+			value = true
+			local plr = game.Players.LocalPlayer
+			local mouse = plr:GetMouse()
+	
+			localplayer = plr
+	
+			if workspace:FindFirstChild("Core") then
+				workspace.Core:Destroy()
+			end
+	
+			local Core = Instance.new("Part")
+			Core.Name = "Core"
+			Core.Size = Vector3.new(0.05, 0.05, 0.05)
+	
+			spawn(function()
+				Core.Parent = workspace
+				local Weld = Instance.new("Weld", Core)
+				Weld.Part0 = Core
+				Weld.Part1 = localplayer.Character.LowerTorso
+				Weld.C0 = CFrame.new(0, 0, 0)
+			end)
+	
+			workspace:WaitForChild("Core")
+	
+			local torso = workspace.Core
+			flying = true
+			local speed=10
+			local keys={a=false,d=false,w=false,s=false} 
+			local e1
+			local e2
+			local function start()
+				local pos = Instance.new("BodyPosition",torso)
+				local gyro = Instance.new("BodyGyro",torso)
+				pos.Name="EPIXPOS"
+				pos.maxForce = Vector3.new(math.huge, math.huge, math.huge)
+				pos.position = torso.Position
+				gyro.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
+				gyro.cframe = torso.CFrame
+				repeat
+					wait()
+					localplayer.Character.Humanoid.PlatformStand=true
+					local new=gyro.cframe - gyro.cframe.p + pos.position
+					if not keys.w and not keys.s and not keys.a and not keys.d then
+						speed=5
+					end
+					if keys.w then 
+						new = new + workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+						speed=speed+0
+					end
+					if keys.s then 
+						new = new - workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+						speed=speed+0
+					end
+					if keys.d then 
+						new = new * CFrame.new(speed,0,0)
+						speed=speed+0
+					end
+					if keys.a then 
+						new = new * CFrame.new(-speed,0,0)
+						speed=speed+0
+					end
+					if speed>10 then
+						speed=5
+					end
+					pos.position=new.p
+					if keys.w then
+						gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(-math.rad(speed*0),0,0)
+					elseif keys.s then
+						gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(math.rad(speed*0),0,0)
+					else
+						gyro.cframe = workspace.CurrentCamera.CoordinateFrame
+					end
+				until flying == false
+				if gyro then gyro:Destroy() end
+				if pos then pos:Destroy() end
+				flying=false
+				localplayer.Character.Humanoid.PlatformStand=false
+				speed=10
+			end
+			e1=mouse.KeyDown:connect(function(key)
+				if not torso or not torso.Parent then flying=false e1:disconnect() e2:disconnect() return end
+				if key=="w" then
+					keys.w=true
+				elseif key=="s" then
+					keys.s=true
+				elseif key=="a" then
+					keys.a=true
+				elseif key=="d" then
+					keys.d=true
+				elseif key=="x" then
+					if flying==true then
+						flying=false
+					else
+						flying=true
+						start()
+					end
+				end
+			end)
+			e2=mouse.KeyUp:connect(function(key)
+				if key=="w" then
+					keys.w=false
+				elseif key=="s" then
+					keys.s=false
+				elseif key=="a" then
+					keys.a=false
+				elseif key=="d" then
+					keys.d=false
+				end
+			end)
+			start()
+		else
+			script.Parent.BackgroundColor3 = Color3.fromRGB(17, 255, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(89, 255, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(209, 255, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 226, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 162, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 140, 0)
+			wait()
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 81, 0)
+			wait(0.15)
+			value = false
+			if flying==true then
+				flying=false
+			end
+		end
+	end)
+end
+coroutine.wrap(PIOW_fake_script)()
+local function IKCD_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(IKCD_fake_script)()
